@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Indian Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #dc3545;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            text-align: center;
+            color: white;
+            text-shadow: #f8f9fa;
+        }
+        h3 {
+            color: #dc3545;
+            border-bottom: 2px solid #dc3545;
+            padding-bottom: 5px;
+        }
+        ul, ol {
+            margin: 10px 0 20px 20px;
+        }
+        .description {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        .price {
+            font-weight: bold;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to South Indian Delights</h1>
+        <p>Authentic South Indian flavors that delight your taste buds</p>
+    </div>
+
+    <div class="container">
+        <h2>Menu</h2>
+
+        <!-- Breakfast -->
+        <h3>Breakfast</h3>
+        <ul>
+            <li>
+                Idli - ₹40
+                <p class="description">Steamed rice cakes served with coconut chutney and sambar.</p>
+            </li>
+            <li>
+                Dosa - ₹60
+                <p class="description">Crispy rice crepe served with chutney and sambar.</p>
+            </li>
+            <li>
+                Pongal - ₹50
+                <p class="description">Comforting rice and lentil dish tempered with spices and ghee.</p>
+            </li>
+        </ul>
+
+        <!-- Main Courses -->
+        <h3>Main Courses</h3>
+        <ol>
+            <li>
+                Sambar Rice - ₹90
+                <p class="description">Flavorful rice cooked with tangy sambar and spices.</p>
+            </li>
+            <li>
+                Bisi Bele Bath - ₹100
+                <p class="description">Traditional Karnataka dish of rice, lentils, and tamarind.</p>
+            </li>
+            <li>
+                Thali - ₹150
+                <p class="description">A complete South Indian meal with rice, sambar, rasam, curd, and side dishes.</p>
+            </li>
+        </ol>
+
+        <!-- Snacks -->
+        <h3>Snacks</h3>
+        <ul>
+            <li>
+                Medu Vada - ₹30
+                <p class="description">Crispy lentil fritters served with chutney and sambar.</p>
+            </li>
+            <li>
+                Bajji - ₹25
+                <p class="description">Vegetable fritters dipped in a spiced gram flour batter and fried.</p>
+            </li>
+            <li>
+                Banana Chips - ₹50
+                <p class="description">Crispy fried banana slices seasoned with salt and spices.</p>
+            </li>
+        </ul>
+
+        <!-- Beverages -->
+        <h3>Beverages</h3>
+        <ul>
+            <li>
+                Filter Coffee - ₹30
+                <p class="description">Traditional South Indian coffee brewed with chicory.</p>
+            </li>
+            <li>
+                Butter Milk - ₹20
+                <p class="description">Cool and refreshing drink spiced with ginger and curry leaves.</p>
+            </li>
+            <li>
+                Tender Coconut Water - ₹40
+                <p class="description">Fresh and natural hydration straight from the coconut.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
