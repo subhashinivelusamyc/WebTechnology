@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel-Blog</title>
+    <style>
+        .header {
+            background-image: url("travel.jpg"); /* Replace with your image URL */
+            background-size: cover; /* Ensure the image covers the entire header */
+            background-position: center; /* Center the image */
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 20px;
+            color: white; /* Make text readable on top of the image */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add text shadow for better visibility */
+        }
+        .container {
+            text-align: center;
+        }
+        .beaches, .mountain {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 0 auto;
+            width: 90%;
+        }
+        .beaches {
+            background-color: #E0FFFF;
+        }
+        .mountain {
+            background-color: #e7bf6f;
+        }
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .divider {
+            height: 2px;
+            background-color: black;
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .item {
+            text-align: center;
+        }
+        .blog-image {
+            height: 300px;
+            width: 300px;
+            transition: transform 0.2s;
+            border-radius: 10px;
+        }
+        .blog-image:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+        .caption {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TRAVEL BLOG</h1>
+            <p>Exploring the world, one adventure at a time!</p>
+        </div>
+        <br>
+        <div class="beaches">
+            <div class="heading">BEACHES</div>
+            <div class="divider"></div>
+            <div class="content">
+                <div class="item">
+                    <a href="https://en.wikipedia.org/wiki/Maldives" target="_blank">
+                        <img src="maldives.jpeg" alt="A serene beach in the Maldives" class="blog-image">
+                    </a>
+                    <p class="caption">The Maldives: Crystal-clear waters and serene beaches. 
+                        <a href="https://en.wikipedia.org/wiki/Maldives" target="_blank">Read more</a>
+                    </p>
+                </div>
+                <div class="item">
+                    <a href="https://en.wikipedia.org/wiki/Goa" target="_blank">
+                        <img src="goa.jpeg" alt="A serene beach in Goa" class="blog-image">
+                    </a>
+                    <p class="caption">Goa: Vibrant beaches and lively atmosphere. 
+                        <a href="https://en.wikipedia.org/wiki/Goa" target="_blank">Read more</a>
+                    </p>
+                </div>
+                <div class="item">
+                    <a href="https://en.wikipedia.org/wiki/Pondicherry" target="_blank">
+                        <img src="pondi.jpg" alt="A serene beach in Pondicherry" class="blog-image">
+                    </a>
+                    <p class="caption">Pondicherry: Tranquil beauty and French charm. 
+                        <a href="https://en.wikipedia.org/wiki/Pondicherry" target="_blank">Read more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="mountain">
+            <div class="heading">MOUNTAINS</div>
+            <div class="divider"></div>
+            <div class="content">
+                <div class="item">
+                    <a href="https://en.wikipedia.org/wiki/Ladakh" target="_blank">
+                        <img src="leh.jpeg" alt="Leh-Ladakh mountains" class="blog-image">
+                    </a>
+                    <p class="caption">Leh-Ladakh: Rugged terrain and breathtaking landscapes. 
+                        <a href="https://en.wikipedia.org/wiki/Ladakh" target="_blank">Read more</a>
+                    </p>
+                </div>
+                <div class="item">
+                    <a href="https://en.wikipedia.org/wiki/Himalayas" target="_blank">
+                        <img src="himalaya.jpg" alt="Himalayan mountains" class="blog-image">
+                    </a>
+                    <p class="caption">Himalayas: Towering peaks and serene valleys. 
+                        <a href="https://en.wikipedia.org/wiki/Himalayas" target="_blank">Read more</a>
+                    </p>
+                </div>
+                <div class="item">
+                    <a href="https://en.wikipedia.org/wiki/Anamudi" target="_blank">
+                        <img src="anamudi.jpeg" alt="Anamudi mountain in Kerala" class="blog-image">
+                    </a>
+                    <p class="caption">Anamudi: The highest peak in South India. 
+                        <a href="https://en.wikipedia.org/wiki/Anamudi" target="_blank">Read more</a>
+                    </p>
+                </div>
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
