@@ -1,0 +1,62 @@
+INDEX.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demonstration</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS -->
+    <style>
+        .internal-style {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #f5c6cb;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Styling Demonstration</h1>
+    <div class="container">
+        <p>This paragraph uses external CSS for the container and general styles of the page.</p>
+
+        <div class="internal-style">
+            This block uses <strong>internal CSS</strong>, which is defined in the "style" section of the HTML file.
+        </div>
+
+        <p style="color: #28a745; font-weight: bold;">
+            This paragraph uses <strong>inline CSS</strong> to make the text green and bold.
+        </p>
+    </div>
+</body>
+</html>
+
+STYLE.CSS
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #007BFF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
