@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, 
+initial-scale=1.0"> 
+    <title>Shopping Checkout</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+        } 
+        .container { 
+            max-width: 500px; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin: auto; 
+        } 
+        h2 { 
+            text-align: center; 
+            color: #333; 
+        } 
+        .item { 
+            display: flex; 
+            justify-content: space-between; 
+            margin-bottom: 10px; 
+            align-items: center; 
+        } 
+        input[type="number"], input[type="text"] { 
+            width: 100px; 
+            padding: 5px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            text-align: center; 
+        } 
+        .total { 
+            font-size: 18px; 
+            font-weight: bold; 
+            text-align: right; 
+            margin-top: 10px; 
+        } 
+        .coupon-section { 
+            margin-top: 15px; 
+        } 
+        button { 
+            width: 100%; 
+            background: #28a745; 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            font-size: 16px; 
+            margin-top: 15px; 
+            cursor: pointer; 
+            border-radius: 5px; 
+        } 
+        button:hover { 
+            background: #218838; 
+        } 
+        .apply-btn { 
+            background: #007bff; 
+        } 
+        .apply-btn:hover { 
+            background: #0056b3; 
+        } 
+    </style> 
+</head> 
+<body> 
+ 
+    <div class="container"> 
+        <h2>Checkout</h2> 
+ 
+        <div class="item"> 
+            <span>Product 1</span> 
+            <input type="number" id="product1" value="1" min="1" 
+onchange="calculateTotal()"> 
+            <span>$10</span> 
+        </div> 
+ 
+        <div class="item"> 
+            <span>Product 2</span> 
+            <input type="number" id="product2" value="1" min="1" 
+onchange="calculateTotal()"> 
+            <span>$20</span> 
+        </div> 
+ 
+        <div class="item"> 
+            <span>Product 3</span> 
+            <input type="number" id="product3" value="1" min="1" 
+onchange="calculateTotal()"> 
+            <span>$15</span> 
+        </div> 
+ 
+        <div class="total">Total: $<span 
+id="totalAmount">45</span></div> 
+ 
+        <div class="coupon-section"> 
+            <label for="coupon">Apply Coupon:</label> 
+            <input type="text" id="coupon" placeholder="Enter coupon 
+code"> 
+            <button class="apply-btn" 
+onclick="applyCoupon()">Apply</button> 
+        </div> 
+ 
+        <button onclick="checkout()">Proceed to Pay</button> 
+    </div> 
+ 
+    <script> 
+        function calculateTotal() { 
+            let product1 = 
+parseInt(document.getElementById("product1").value) * 10; 
+            let product2 = 
+parseInt(document.getElementById("product2").value) * 20; 
+            let product3 = 
+parseInt(document.getElementById("product3").value) * 15; 
+            let total = product1 + product2 + product3; 
+            document.getElementById("totalAmount").innerText = total; 
+        } 
+ 
+        function applyCoupon() { 
+            let couponCode = 
+document.getElementById("coupon").value.trim(); 
+            let total = 
+parseFloat(document.getElementById("totalAmount").innerText); 
+ 
+            if (couponCode === "DISCOUNT10") { 
+                let discountedTotal = total * 0.9; // 10% discount 
+                document.getElementById("totalAmount").innerText = 
+discountedTotal.toFixed(2); 
+                alert("Coupon Applied! You got a 10% discount."); 
+            } else if (couponCode === "FREESHIP") { 
+                alert("Coupon Applied! You got Free Shipping."); 
+            } else { 
+                alert("Invalid Coupon Code!"); 
+            } 
+        } 
+ 
+        function checkout() { 
+            let total = 
+parseFloat(document.getElementById("totalAmount").innerText); 
+            if (total > 0) { 
+                alert("Payment Successful! Your order is 
+confirmed."); 
+            } else { 
+                alert("Your cart is empty!"); 
+            } 
+        } 
+    </script> 
+ 
+</body> 
+</html>
