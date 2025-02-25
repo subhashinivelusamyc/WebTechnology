@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookstore</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        height: 100vh;
+    }
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    .main {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        height: 100%;
+    }
+    nav {
+        background-color: #f4f4f9;
+        padding: 20px;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        padding: 8px;
+        border-radius: 4px;
+    }
+    nav a:hover {
+        background-color: #dce4ee;
+        
+    }
+    .content {
+        padding: 20px;
+    }
+    .content h2 {
+        margin-top: 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to the Bookstore</h1>
+    </header>
+
+    <!-- Main Section -->
+    <div class="main">
+        <!-- Navigation Section -->
+        <nav>
+            <a href="#fiction" onclick="loadContent('fiction')">Fiction</a>
+            <a href="#nonFiction" onclick="loadContent('nonFiction')">Non-Fiction</a>
+            <a href="#science" onclick="loadContent('science')">Science</a>
+            <a href="#children" onclick="loadContent('children')">Children</a>
+        </nav>
+
+        <!-- Content Section -->
+        <div class="content" id="content-area">
+            <h2>Welcome to the Content Section</h2>
+            <p>Select a category from the navigation menu to explore books.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to load content dynamically
+    function loadContent(category) {
+        const contentArea = document.getElementById('content-area');
+        let content = '';
+
+        switch (category) {
+            case 'fiction':
+                content = `
+                    <h2>Fiction Books</h2>
+                    <ul>
+                        <li>The Great Gatsby by F. Scott Fitzgerald</li>
+                        <li>To Kill a Mockingbird by Harper Lee</li>
+                        <li>1984 by George Orwell</li>
+                    </ul>`;
+                break;
+
+            case 'nonFiction':
+                content = `
+                    <h2>Non-Fiction Books</h2>
+                    <ul>
+                        <li>Sapiens by Yuval Noah Harari</li>
+                        <li>Educated by Tara Westover</li>
+                        <li>The Immortal Life of Henrietta Lacks by Rebecca Skloot</li>
+                    </ul>`;
+                break;
+
+            case 'science':
+                content = `
+                    <h2>Science Books</h2>
+                    <ul>
+                        <li>A Brief History of Time by Stephen Hawking</li>
+                        <li>The Selfish Gene by Richard Dawkins</li>
+                        <li>The Gene by Siddhartha Mukherjee</li>
+                    </ul>`;
+                break;
+
+            case 'children':
+                content = `
+                    <h2>Children's Books</h2>
+                    <ul>
+                        <li>Harry Potter Series by J.K. Rowling</li>
+                        <li>Charlotte's Web by E.B. White</li>
+                        <li>The Cat in the Hat by Dr. Seuss</li>
+                    </ul>`;
+                break;
+
+            default:
+                content = `
+                    <h2>Welcome to the Content Section</h2>
+                    <p>Select a category from the navigation menu to explore books.</p>`;
+                break;
+        }
+
+        contentArea.innerHTML = content;
+    }
+</script>
+
+</body>
+</html>
