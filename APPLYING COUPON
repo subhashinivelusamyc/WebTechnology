@@ -142,8 +142,7 @@ discountedTotal.toFixed(2);
             let total = 
 parseFloat(document.getElementById("totalAmount").innerText); 
             if (total > 0) { 
-                alert("Payment Successful! Your order is 
-confirmed."); 
+                alert("Payment Successful! Your order is confirmed."); 
             } else { 
                 alert("Your cart is empty!"); 
             } 
