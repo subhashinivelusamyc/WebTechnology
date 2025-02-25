@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Feedback Form</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 20px;
+background-color: #f4f4f4;
+}
+
+.container {
+max-width: 400px;
+background: white;
+padding: 40px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+margin: auto;
+}
+h2 {
+text-align: center;
+color: #333;
+}
+label {
+font-weight: bold;
+display: block;
+margin-top: 10px;
+}
+input, textarea, select {
+width: 100%;
+padding: 8px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.error {
+color: red;
+font-size: 12px;
+}
+button {
+width: 100%;
+background: #28a745;
+color: white;
+border: none;
+padding: 10px;
+font-size: 16px;
+margin-top: 15px;
+
+cursor: pointer;
+border-radius: 5px;
+}
+button:hover {
+background: #218838;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Feedback Form</h2>
+<form id="feedbackForm" onsubmit="return validateForm()">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">
+<span id="nameError" class="error"></span>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+<span id="emailError" class="error"></span>
+<label for="feedback">Feedback:</label>
+<textarea id="feedback" name="feedback"
+
+rows="4"></textarea>
+
+<span id="feedbackError" class="error"></span>
+<label for="rating">Rating (1 to 5):</label>
+<select id="rating" name="rating">
+<option value="">Select Rating</option>
+<option value="1">1 - Poor</option>
+<option value="2">2 - Fair</option>
+<option value="3">3 - Good</option>
+<option value="4">4 - Very Good</option>
+<option value="5">5 - Excellent</option>
+</select>
+
+<span id="ratingError" class="error"></span>
+<button type="submit">Submit Feedback</button>
+</form>
+</div>
+<script>
+function validateForm() {
+let isValid = true;
+// Get input values
+let name = document.getElementById("name").value.trim();
+let email =
+
+document.getElementById("email").value.trim();
+
+let feedback =
+
+document.getElementById("feedback").value.trim();
+
+let rating = document.getElementById("rating").value;
+// Clear previous errors
+document.getElementById("nameError").innerText = "";
+document.getElementById("emailError").innerText = "";
+document.getElementById("feedbackError").innerText = "";
+document.getElementById("ratingError").innerText = "";
+// Validate Name (Not Empty)
+if (name === "") {
+document.getElementById("nameError").innerText =
+
+"Name cannot be empty";
+
+isValid = false;
+}
+// Validate Email (Valid Format)
+let emailPattern =
+
+/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+if (email === "" || !emailPattern.test(email)) {
+
+document.getElementById("emailError").innerText =
+
+"Enter a valid email";
+
+isValid = false;
+}
+// Validate Feedback (Not Empty)
+if (feedback === "") {
+document.getElementById("feedbackError").innerText =
+
+"Feedback cannot be empty";
+isValid = false;
+}
+// Validate Rating (1-5)
+if (rating === "") {
+document.getElementById("ratingError").innerText =
+
+"Please select a rating";
+isValid = false;
+}
+return isValid;
+}
+</script>
+</body>
+</html>
